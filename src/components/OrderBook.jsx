@@ -103,7 +103,7 @@ export default function OrderBook() {
     position: 'relative',
     display: 'flex',
     justifyContent: 'space-between',
-  RE  padding: '2px 4px',
+    padding: '2px 4px',
     transition: 'background-color 0.2s ease',
     cursor: 'pointer',
     backgroundColor: highlighted ? 'rgba(255,255,255,0.1)' : 'transparent',
