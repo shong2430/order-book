@@ -120,25 +120,23 @@ export default function OrderBook() {
   const totalAskSize = asks.reduce((sum, item) => sum + item.size, 0);
 
   const rowStyle = (highlighted, side) => {
-    let bg = 'transparent';
-    if (highlighted && side === 'bids') bg = 'rgba(0, 177, 93, 0.12)';
-    if (highlighted && side === 'asks') bg = 'rgba(255, 90, 90, 0.12)';
-  
+    let bg = "transparent";
+    if (highlighted && side === "bids") bg = "rgba(0, 177, 93, 0.12)";
+    if (highlighted && side === "asks") bg = "rgba(255, 90, 90, 0.12)";
+
     return {
-      position: 'relative',
-      display: 'flex',
-      justifyContent: 'space-between',
-      padding: '2px 4px',
-      transition: 'background-color 0.2s ease',
-      cursor: 'pointer',
+      position: "relative",
+      display: "flex",
+      justifyContent: "space-between",
+      padding: "2px 4px",
+      transition: "background-color 0.2s ease",
+      cursor: "pointer",
       backgroundColor: bg,
       fontSize: 12,
       height: 24,
-      alignItems: 'center',
+      alignItems: "center",
     };
   };
-  
-  
 
   const renderLastPrice = () => {
     let color = "#F0F4F8";
@@ -214,7 +212,7 @@ export default function OrderBook() {
           <div
             key={`ask-${i}`}
             style={{
-              ...rowStyle(highlightRows.asks[i], 'asks'),
+              ...rowStyle(highlightRows.asks[i], "asks"),
               color: ask.price > 0 ? "#FF5B5A" : "#444",
             }}
           >
@@ -270,7 +268,7 @@ export default function OrderBook() {
           <div
             key={`bid-${i}`}
             style={{
-              ...rowStyle(highlightRows.bids[i], 'bids'),
+              ...rowStyle(highlightRows.bids[i], "bids"),
               color: bid.price > 0 ? "#00b15d" : "#444",
             }}
           >
